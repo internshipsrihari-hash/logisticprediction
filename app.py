@@ -14,28 +14,28 @@ st.title("📦 Logistics Cost Prediction")
 st.write("Enter shipment details:")
 
 # USER INPUT (Streamlit UI)
-weight = st.number_input("Enter Weight (kg)", min_value=0.0, value=1.0)
+weight = st.number_input("Enter Weight (kg)", min_value=0.0, value=0.0)
 
 carrier = st.selectbox(
     "Select Carrier",
-    ["Amazon Logistics", "FedEx", "UPS", "DHL", "LaserShip", "USPS", "OnTrac"]
+    ["CHOOSE CARRIER","Amazon Logistics", "FedEx", "UPS", "DHL", "LaserShip", "USPS", "OnTrac"]
 )
 
 origin = st.selectbox(
     "Select Origin Warehouse",
-    ["Warehouse_ATL","Warehouse_BOS","Warehouse_CHI","Warehouse_DEN",
+    ["CHOOSE ORGIN WAREHOUSE","Warehouse_ATL","Warehouse_BOS","Warehouse_CHI","Warehouse_DEN",
      "Warehouse_HOU","Warehouse_LA","Warehouse_MIA","Warehouse_NYC",
      "Warehouse_SEA","Warehouse_SF"]
 )
 
 destination = st.selectbox(
     "Select Destination",
-    ["Atlanta","Boston","Chicago","Dallas","Denver","Detroit","Houston",
+    ["CHOOSE DESTINATION","Atlanta","Boston","Chicago","Dallas","Denver","Detroit","Houston",
      "Los Angeles","Miami","Minneapolis","New York","Phoenix",
      "Portland","San Francisco","Seattle"]
 )
 
-duration = st.slider("Transit Days", 1, 10, 3)
+duration = st.slider("Transit Days", 1, 10, 5)
 
 # Predict button
 if st.button("Predict Cost"):
